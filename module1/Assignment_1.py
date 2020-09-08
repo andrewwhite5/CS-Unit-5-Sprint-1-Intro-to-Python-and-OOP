@@ -148,17 +148,17 @@ for i in tonto_trees:
     print('*', i)
 
 # Check if a tuple item exists
-def check_for_item(name):
+def check_for_tuple_item(name):
     if name in tonto_trees:
         return(f'{name} exists')
     else:
         return(f'{name} does not exist')
 
 print('\nCheck if mesquite already exists (spoiler alert: it does):')
-print(check_for_item('mesquite'))
+print(check_for_tuple_item('mesquite'))
 
 print("\nCheck if aspen already exists (spoiler alert: it doesn't):")
-print(check_for_item('aspen'))
+print(check_for_tuple_item('aspen'))
 
 # Get the length of a tuple
 print('\nLength of tuple:', len(tonto_trees))
@@ -190,30 +190,51 @@ for i in sanderson_sl_books:
     print('*', i)
 
 # Check if an item exists
+def check_for_set_item(name):
+    if name in sanderson_sl_books:
+        return(f'{name} exists')
+    else:
+        return(f'{name} does not exist')
 
+print('\nCheck if Oathbringer already exists (spoiler alert: it does):')
+print(check_for_set_item('Oathbringer'))
+
+print("\nCheck if Boomshakalaka already exists (spoiler alert: it doesn't):")
+print(check_for_set_item('Boomshakalaka'))
 
 # Add an item to a set
-
+sanderson_sl_books.add('Untitled Book 5')
+print('\nCheck for new book:', sanderson_sl_books)
 
 # Add multiple items to a set
-
+new_books = ['Untitled Book 6', 'Untitled Book 7']
+for book in new_books:
+    sanderson_sl_books.add(book)
+print('\nCheck for new books:', sanderson_sl_books)
 
 # Get the length of a set
-
+print('\nLength of set:', len(sanderson_sl_books))
 
 # Remove an item in a set
-
+sanderson_sl_books.discard('Untitled Book 7')
+print('\nCheck if book 7 was removed:', sanderson_sl_books)
 
 # Remove an item in a set by using the discard() method
-
+sanderson_sl_books.remove('Untitled Book 6')
+print('\nCheck if book 6 was removed:', sanderson_sl_books)
 
 # Remove the last item in a set by using the pop() method
-
+sanderson_sl_books.pop()
+print('\nCheck if item in set was removed:', sanderson_sl_books)
 
 # Empty a set
-
+sanderson_sl_books.clear()
+print('\nCheck if set was cleared:', sanderson_sl_books)
 
 # Delete a set
-
+del sanderson_sl_books
 
 # Use the set() constructor to create a set
+common_guitar_chords = ['C major', 'A major', 'G major', 'E major', 'D major']
+common_chords_set = set(common_guitar_chords)
+print('\nLook at new set of guitar chords:', common_chords_set)
